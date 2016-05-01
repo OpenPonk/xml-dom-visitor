@@ -1,0 +1,12 @@
+SmalltalkCISpec {
+	#loading : [
+		SCIMetacelloLoadSpec {
+			#baseline : 'XMLDOMVisitor',
+			#directory : 'repository',
+			#platforms : [ #pharo ]
+		}
+	],
+	#testing : {
+		#packages : [ 'XML-DOM-Visitor.*' ]
+	}
+}
