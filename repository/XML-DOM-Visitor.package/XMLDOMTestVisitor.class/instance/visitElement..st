@@ -1,4 +1,4 @@
 visiting
 visitElement: anElement
-	entries at: anElement name put: anElement name.
+	entries add: anElement name -> anElement name.
 	super visitElement: anElement

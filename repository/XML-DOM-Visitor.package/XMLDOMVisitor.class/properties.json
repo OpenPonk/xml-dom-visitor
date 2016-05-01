@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"entries" ],
-	"name" : "XmlDomTestVisitor",
+		 ],
+	"name" : "XMLDOMVisitor",
 	"pools" : [
 		 ],
-	"super" : "XmlDomVisitor",
+	"super" : "Object",
 	"type" : "normal" }
