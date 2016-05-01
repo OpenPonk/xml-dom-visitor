@@ -7,8 +7,9 @@ baseline_0_1_0: spec
 			spec
 				project: 'XMLParser'
 				with: [ spec
-						className: #ConfigurationOfXMLParser;
+						className: 'ConfigurationOfXMLParser';
+						loads: #('default');
 						versionString: #stable;
-						repository: 'http://smalltalkhub.com/mc/PharoExtras/XMLParser/main/' ].
+						repository: 'http://www.smalltalkhub.com/mc/PharoExtras/XMLParser/main' ].
 			spec package: 'XML-DOM-Visitor' with: [ spec requires: #('XMLParser') ].
 			spec group: 'default' with: #('XML-DOM-Visitor') ]
