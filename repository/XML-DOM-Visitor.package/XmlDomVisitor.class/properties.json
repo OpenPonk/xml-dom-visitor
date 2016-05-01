@@ -1,0 +1,14 @@
+{
+	"category" : "XML-DOM-Visitor-Visitor",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "XmlDomVisitor",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
