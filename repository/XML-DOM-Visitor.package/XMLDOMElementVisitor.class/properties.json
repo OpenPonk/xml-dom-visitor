@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "PeterUhnak 10/16/2016 06:52",
+	"commentStamp" : "PeterUhnak 10/16/2016 06:55",
 	"instvars" : [
-		 ],
-	"name" : "XMLDOMVisitor",
+		"elementVisitor" ],
+	"name" : "XMLDOMElementVisitor",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "XMLDOMVisitor",
 	"type" : "normal" }

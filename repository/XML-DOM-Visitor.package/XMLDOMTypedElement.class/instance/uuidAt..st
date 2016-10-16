@@ -1,0 +1,3 @@
+typed accessing
+uuidAt: aName
+	^ UUID fromString: (self attributeAt: aName)
