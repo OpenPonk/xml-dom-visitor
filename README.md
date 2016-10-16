@@ -1,6 +1,6 @@
 # XML DOM Visitor [![Build Status](https://travis-ci.org/peteruhnak/xml-dom-visitor.svg?branch=master)](https://travis-ci.org/peteruhnak/xml-dom-visitor)
 
-A simple extension for [XMLParser's](http://smalltalkhub.com/#!/~PharoExtras/XMLParser) DOM to permit a basic visitor.
+An extension for [XMLParser's](http://smalltalkhub.com/#!/~PharoExtras/XMLParser) DOM to permit a basic visitor.
 
 ## Base DOM visitor
 
@@ -17,7 +17,7 @@ XMLDOMElementVisitor new
 	visit: dom.
 ```
 
-Then for an element '<someElement>`, the `visitSomeElement:` message will be sent to your `MyVisitor`.
+Then for an element `<someElement>`, the `visitSomeElement:` message will be sent to your `MyVisitor`.
 
 ## Typed attributes retrieval
 
