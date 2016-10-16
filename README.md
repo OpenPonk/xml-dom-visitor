@@ -39,11 +39,11 @@ Example:
 
 ```
 element uuidAt: #id. "-> UUID instance of cc254e89-569e-5b46-a6e9-4a06de4d9da0"
-element booleanAt: #isRandom "-> true"
-element stringAt: #isRandom "-> 'true'"
-element numberAt: #anotherNumber "-> "14.2"
-element numberAt: #number "-> 12"
-element stringAt: #number "-> '12'".
+element booleanAt: #isRandom. "-> true"
+element stringAt: #isRandom. "-> 'true'"
+element numberAt: #anotherNumber. "-> "14.2"
+element numberAt: #number. "-> 12"
+element stringAt: #number. "-> '12'".
 ```
 
 ### Supported selectors:
