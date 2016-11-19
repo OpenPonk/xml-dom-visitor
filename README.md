@@ -1,14 +1,47 @@
 # XML DOM Visitor [![Build Status](https://travis-ci.org/peteruhnak/xml-dom-visitor.svg?branch=master)](https://travis-ci.org/peteruhnak/xml-dom-visitor)
 
-An extension for [XMLParser's](http://smalltalkhub.com/#!/~PharoExtras/XMLParser) DOM to permit a basic visitor.
+An extension for [XMLParser's](http://smalltalkhub.com/#!/~PharoExtras/XMLParser) DOM.
 
-## Base DOM visitor
+Three functionalities:
+
+* base class for DOM visitors by the element's types (Document, Element, CData, String, ...)
+* delegating visitor with which you can visit the DOM by element's name
+* typed retrieval of node values and attribute values
+
+## Example
+
+```xml
+<people>
+	<docId>cc254e89-569e-5b46-a6e9-4a06de4d9da0</docId>
+	<person name="Sarah" age="32" />
+	<person name="Carl" age="27" />
+</people>
+```
+
+The XML above can be visited with these two methods:
+
+`MyVisitor>>visitPeople: aPeopleElement`
+`MyVisitor>>visitDocId: aDocIdElement`
+`MyVisitor>>visitPerson: aPersonElement`
+
+Additionally the string nodes and attribute values can be retrieved with a specific type.
+
+```st
+MyVisitor>>visitDocId: aDocIdElement
+	aDocIdElement uuidValue "an instace of UUID('cc254e89-569e-5b46-a6e9-4a06de4d9da0')"
+
+MyVisitor>>visitPerson: aPersonElement
+	aPersonElement stringAt: #name "returns string 'Sarah'"
+	aPersonElement numberAt: #age "returns number '32'"
+```
+
+## Usage - Creating generic DOM visitor
 
 Subclass `XMLDOMVisitor` to create your own visitor. (Example in `XMLDOMTestVisitor`).
 
-## Element delegating visitor
+## Usage - Element delegating visitor
 
-Or use `XMLDOMElementVisitor` which will delegate the visiting to your object with the element's name as the selector, e.g.
+Use `XMLDOMElementVisitor` which will delegate the visiting to your object with the element's `localName` (without namespace) as the selector, e.g.
 
 ```
 visitor := MyVisitor new.
@@ -17,13 +50,11 @@ XMLDOMElementVisitor new
 	visit: dom.
 ```
 
-Then for an element `<someElement>`, the `visitSomeElement:` message will be sent to your `MyVisitor`.
+Then e.g. for an element `<person>`, the `visitPerson:` message will be sent to your `MyVisitor`.
 
-## Typed attributes retrieval
+## Usage - Typed values
 
-A `XMLDOMTypedElement` class is provided, with which you can retrieve attributes with given type.
-
-The class has to be provided during the parsing of the DOM.
+If you specify `XMLDOMTypedElement` as the target node during parsing, then you can retrieve values with a specific type.
 
 ```
 dom := (XMLDOMParser on: aStream)
@@ -35,21 +66,23 @@ Then all element nodes in the dom will be instances of `XMLDOMTypedElement`.
 
 Example:
 
-`<myElement id="cc254e89-569e-5b46-a6e9-4a06de4d9da0" isRandom="true" number="12" anotherNumber="14.2" />`
+`<myElement isRandom="true">12.7</myElement>`
 
 ```
-element uuidAt: #id. "-> UUID instance of cc254e89-569e-5b46-a6e9-4a06de4d9da0"
 element booleanAt: #isRandom. "-> true"
 element stringAt: #isRandom. "-> 'true'"
-element numberAt: #anotherNumber. "-> "14.2"
-element numberAt: #number. "-> 12"
-element stringAt: #number. "-> '12'".
+
+element numberValue. "-> 12.7"
+element stringValue. "-> '12.7'"
 ```
 
 ### Supported selectors:
 
-`XMLDOMTypedElement selectorsInProtocol: 'typed accessing' "#(#booleanAt: #numberAt: #stringAt: #symbolAt: #uuidAt:)"`
+Look into the protocols `typed attribute accessing` and `typed value accessing` of `XMLDOMTypedElement`.
 
+The following conversions are supported: `boolean`, `date`, `number`, `string`, `symbol`, and `uuid`.
+
+Additionally `XMLDOMTypedElement>>isEmptyValue` will return boolean depending if any string content is in the element. (e.g. `<el></el>` versus `<el>data</el>`)
 
 ## Installation
 
