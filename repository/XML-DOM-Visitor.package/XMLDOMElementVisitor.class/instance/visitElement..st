@@ -1,4 +1,4 @@
 visiting
 visitElement: anElement
-	elementVisitor perform: (self visitSelectorFor: anElement name) with: anElement.
+	elementVisitor perform: (self visitSelectorFor: anElement localName) with: anElement.
 	super visitElement: anElement

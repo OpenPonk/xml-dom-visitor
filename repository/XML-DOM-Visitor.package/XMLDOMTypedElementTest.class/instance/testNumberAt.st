@@ -1,4 +1,4 @@
-tests-typed accessing
+tests-typed attribute accessing
 testNumberAt
 	element := self
 		elementWithAttributes:

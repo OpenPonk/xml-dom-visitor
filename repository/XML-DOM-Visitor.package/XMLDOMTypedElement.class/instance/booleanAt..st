@@ -1,3 +1,3 @@
-typed accessing
+typed attribute accessing
 booleanAt: aName
-	^ (self attributeAt: aName) = 'true' | ((self attributeAt: aName) = '1')
+	^ self booleanFrom: (self attributeAt: aName)
