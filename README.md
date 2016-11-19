@@ -4,9 +4,9 @@ An extension for [XMLParser's](http://smalltalkhub.com/#!/~PharoExtras/XMLParser
 
 Three functionalities:
 
-* base class for DOM visitors by the element's types (Document, Element, CData, String, ...)
-* delegating visitor with which you can visit the DOM by element's name
-* typed retrieval of node values and attribute values
+* [base class for DOM visitors by the element's types (Document, Element, CData, String, ...)](#usage---creating-generic-dom-visitor)
+* [delegating visitor with which you can visit the DOM by element's name](#usage---element-delegating-visitor)
+* [typed retrieval of node values and attribute values](#usage---typed-values)
 
 ## Example
 
