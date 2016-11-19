@@ -9,6 +9,8 @@ Three functionalities:
 * [typed retrieval of node values and attribute values](#usage---typed-values)
 	* [supported selectors](#supported-selectors)
 
+<br>
+
 * [Example](#example)
 * [Installation](#installation)
 
