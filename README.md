@@ -87,7 +87,7 @@ The following conversions are supported: `boolean`, `date`, `number`, `string`, 
 
 Extras:
 
-* `booleanAt:`/`booleanValue` will return `true` for strings `'true'` or `'1'`.
+* `booleanAt:`/`booleanValue` will return `true` for strings `'true'`, `'1'`, or 'yes'.
 * `XMLDOMTypedElement>>isEmptyValue` will return boolean if the element has any content. (e.g. `<el></el>` versus `<el>data</el>`)
 
 ## Installation
