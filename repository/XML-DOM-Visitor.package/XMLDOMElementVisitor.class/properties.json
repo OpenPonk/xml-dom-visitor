@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "PeterUhnak 10/16/2016 06:55",
 	"instvars" : [
-		"elementVisitor" ],
+		"elementVisitor",
+		"ignoredElements" ],
 	"name" : "XMLDOMElementVisitor",
 	"pools" : [
 		 ],

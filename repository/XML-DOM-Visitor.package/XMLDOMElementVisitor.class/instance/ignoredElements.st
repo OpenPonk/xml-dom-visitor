@@ -1,0 +1,3 @@
+accessing
+ignoredElements
+	^ ignoredElements ifNil: [ #() ]

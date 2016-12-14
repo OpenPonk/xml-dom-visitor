@@ -1,3 +1,3 @@
 private - converting
 booleanFrom: aString
-	^ aString = 'true' | (aString = '1')
+	^ #('1' 'true' 'yes') includes: aString
