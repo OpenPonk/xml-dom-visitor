@@ -1,4 +1,4 @@
-# XML DOM Visitor [![Build Status](https://travis-ci.org/peteruhnak/xml-dom-visitor.svg?branch=master)](https://travis-ci.org/peteruhnak/xml-dom-visitor)
+# XML DOM Visitor [![Build Status](https://travis-ci.org/peteruhnak/xml-dom-visitor.svg?branch=master)](https://travis-ci.org/peteruhnak/xml-dom-visitor) [![Test Status](https://api.bob-bench.org/v1/badgeByUrl?branch=master&hosting=github&ci=travis-ci&repo=peteruhnak%2Fxml-dom-visitor)](https://bob-bench.org/r/gh/peteruhnak/xml-dom-visitor)
 
 An extension for [XMLParser's](http://smalltalkhub.com/#!/~PharoExtras/XMLParser) DOM.
 
