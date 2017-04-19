@@ -1,4 +1,4 @@
-# XML DOM Visitor [![Build Status](https://travis-ci.org/peteruhnak/xml-dom-visitor.svg?branch=master)](https://travis-ci.org/peteruhnak/xml-dom-visitor)
+# XML DOM Visitor [![Build Status](https://travis-ci.org/peteruhnak/xml-dom-visitor.svg?branch=master)](https://travis-ci.org/peteruhnak/xml-dom-visitor) [![Coverage Status](https://coveralls.io/repos/github/peteruhnak/xml-dom-visitor/badge.svg?branch=master)](https://coveralls.io/github/peteruhnak/xml-dom-visitor?branch=master)
 
 An extension for [XMLParser's](http://smalltalkhub.com/#!/~PharoExtras/XMLParser) DOM.
 

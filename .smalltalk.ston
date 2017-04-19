@@ -8,5 +8,8 @@ SmalltalkCISpec {
 	],
 	#testing : {
 		#packages : [ 'XML-DOM-Visitor.*' ]
+                #coverage : {
+                  #packages : [ 'XML-DOM-Visitor.*' ]
+                }
 	}
 }
