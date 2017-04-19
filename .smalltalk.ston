@@ -8,14 +8,14 @@ SmalltalkCISpec {
 			#directory : 'repository'
 		}
 	],
-	#testing : [
-		#packages : [
-			'XML-DOM-Visitor'
-		],
-		#coverage : [
+	#testing : {
+		#coverage : {
 			#packages : [
 				'XML-DOM-Visitor'
 			]
+		},
+		#packages : [
+			'XML-DOM-Visitor'
 		]
-	]
+	}
 }
