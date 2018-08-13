@@ -1,15 +1,14 @@
 {
-	"category" : "XML-DOM-Visitor-Visitor",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 10/16/2016 06:55",
+	"super" : "XMLDOMVisitor",
+	"category" : "XML-DOM-Visitor-Visitor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"elementVisitor",
-		"ignoredElements" ],
+		"ignoredElements"
+	],
 	"name" : "XMLDOMElementVisitor",
-	"pools" : [
-		 ],
-	"super" : "XMLDOMVisitor",
-	"type" : "normal" }
+	"type" : "normal"
+}

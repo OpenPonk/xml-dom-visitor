@@ -1,3 +1,3 @@
-*XML-DOM-Visitor-visitor
+*XML-DOM-Visitor
 accept: aVisitor
-	aVisitor visitElement: self
+	^ aVisitor visitElement: self

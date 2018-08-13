@@ -1,3 +1,3 @@
 visitor
 visit: aDocument
-	aDocument accept: self
+	^ aDocument accept: self

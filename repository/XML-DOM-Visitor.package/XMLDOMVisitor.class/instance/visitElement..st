@@ -1,3 +1,3 @@
 visiting
-visitElement: anElement 
-	anElement nodes do: [ :each | each accept: self ]
+visitElement: anElement
+	^ anElement nodes do: [ :each | each accept: self ]

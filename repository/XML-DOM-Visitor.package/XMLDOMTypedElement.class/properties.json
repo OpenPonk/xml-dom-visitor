@@ -1,14 +1,11 @@
 {
-	"category" : "XML-DOM-Visitor-DOM",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "XMLDOMTypedElement",
-	"pools" : [
-		 ],
 	"super" : "XMLElement",
-	"type" : "normal" }
+	"category" : "XML-DOM-Visitor-DOM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLDOMTypedElement",
+	"type" : "normal"
+}

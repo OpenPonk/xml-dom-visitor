@@ -1,14 +1,13 @@
 {
-	"category" : "XML-DOM-Visitor-Tests",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"element" ],
-	"name" : "XMLDOMTypedElementTest",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "XML-DOM-Visitor-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"element"
+	],
+	"name" : "XMLDOMTypedElementTest",
+	"type" : "normal"
+}
