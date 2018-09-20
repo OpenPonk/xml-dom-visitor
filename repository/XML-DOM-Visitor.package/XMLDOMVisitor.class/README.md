@@ -1,1 +1,0 @@
-I am a base class for XML DOM visitors.
