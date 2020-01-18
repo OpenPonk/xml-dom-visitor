@@ -1,7 +1,7 @@
 # XML DOM Visitor
-[![Build Status](https://travis-ci.org/peteruhnak/xml-dom-visitor.svg?branch=master)](https://travis-ci.org/peteruhnak/xml-dom-visitor) [![Coverage Status](https://coveralls.io/repos/github/peteruhnak/xml-dom-visitor/badge.svg?branch=master)](https://coveralls.io/github/peteruhnak/xml-dom-visitor?branch=master)
+[![Build Status](https://travis-ci.com/OpenPonk/xml-dom-visitor.svg?branch=master)](https://travis-ci.com/OpenPonk/xml-dom-visitor) [![Coverage Status](https://coveralls.io/repos/github/OpenPonk/xml-dom-visitor/badge.svg?branch=master)](https://coveralls.io/github/OpenPonk/xml-dom-visitor?branch=master)
 
-An extension for [XMLParser's](http://smalltalkhub.com/#!/~PharoExtras/XMLParser) DOM.
+An extension for [XMLParser's](https://github.com/pharo-contributions/XML-XMLParser) DOM.
 
 Three functionalities:
 
@@ -96,6 +96,6 @@ Extras:
 ```
 Metacello new
 	baseline: 'XMLDOMVisitor';
-	repository: 'github://peteruhnak/xml-dom-visitor/repository';
+	repository: 'github://OpenPonk/xml-dom-visitor/repository';
 	load.
 ```
