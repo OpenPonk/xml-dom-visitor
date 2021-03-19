@@ -1,5 +1,5 @@
 {
 	"include" : [
-		{ "repository" : "OpenPonk/xmi" }
+		{ "repository" : "OpenPonk/xmi", "build-dependent" : true }
 	]
 }
