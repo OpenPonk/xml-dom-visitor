@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfXMLDOMVisitor }
+Package { #name : 'BaselineOfXMLDOMVisitor' }
