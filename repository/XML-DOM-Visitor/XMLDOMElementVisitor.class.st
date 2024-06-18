@@ -4,41 +4,43 @@ I am a DOM visitor that visits elements and delegates the visition to pluggable 
 e.g. upon visiting `<ActorRoles>` element the `elementVisitor visitActorRoles:` method will be called.
 "
 Class {
-	#name : #XMLDOMElementVisitor,
-	#superclass : #XMLDOMVisitor,
+	#name : 'XMLDOMElementVisitor',
+	#superclass : 'XMLDOMVisitor',
 	#instVars : [
 		'elementVisitor',
 		'ignoredElements'
 	],
-	#category : 'XML-DOM-Visitor-Visitor'
+	#category : 'XML-DOM-Visitor-Visitor',
+	#package : 'XML-DOM-Visitor',
+	#tag : 'Visitor'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 XMLDOMElementVisitor >> elementVisitor [
 	^ elementVisitor
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 XMLDOMElementVisitor >> elementVisitor: aVisitor [
 	elementVisitor := aVisitor
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 XMLDOMElementVisitor >> ignoredElements [
 	^ ignoredElements ifNil: [ #() ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 XMLDOMElementVisitor >> ignoredElements: aCollection [
 	ignoredElements := aCollection
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 XMLDOMElementVisitor >> isIgnored: anElement [
 	^ self ignoredElements includes: anElement name
 ]
 
-{ #category : #visiting }
+{ #category : 'visiting' }
 XMLDOMElementVisitor >> visitElement: anElement [
 	(self isIgnored: anElement)
 		ifTrue: [ ^ self ].
@@ -46,7 +48,7 @@ XMLDOMElementVisitor >> visitElement: anElement [
 	super visitElement: anElement
 ]
 
-{ #category : #visitor }
+{ #category : 'visitor' }
 XMLDOMElementVisitor >> visitSelectorFor: aNodeName [
 	^ ('visit' , aNodeName capitalized , ':') asSymbol
 ]

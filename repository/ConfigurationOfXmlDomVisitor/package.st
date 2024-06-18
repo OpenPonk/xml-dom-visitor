@@ -1,1 +1,1 @@
-Package { #name : #ConfigurationOfXmlDomVisitor }
+Package { #name : 'ConfigurationOfXmlDomVisitor' }

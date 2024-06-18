@@ -1,1 +1,1 @@
-Package { #name : #'XML-DOM-Visitor' }
+Package { #name : 'XML-DOM-Visitor' }

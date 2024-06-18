@@ -1,6 +1,6 @@
-Extension { #name : #XMLCData }
+Extension { #name : 'XMLCData' }
 
-{ #category : #'*XML-DOM-Visitor-visitor' }
+{ #category : '*XML-DOM-Visitor-visitor' }
 XMLCData >> accept: aVisitor [
 	aVisitor visitCData: self
 ]

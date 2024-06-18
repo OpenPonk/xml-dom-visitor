@@ -1,10 +1,12 @@
 Class {
-	#name : #XMLDOMVisitorTest,
-	#superclass : #TestCase,
-	#category : 'XML-DOM-Visitor-Tests'
+	#name : 'XMLDOMVisitorTest',
+	#superclass : 'TestCase',
+	#category : 'XML-DOM-Visitor-Tests',
+	#package : 'XML-DOM-Visitor',
+	#tag : 'Tests'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 XMLDOMVisitorTest >> newDocument [
 	^ XMLDOMParser parse: '<?xml version="1.0" encoding="UTF-8"?>
 	<root>
@@ -14,7 +16,7 @@ XMLDOMVisitorTest >> newDocument [
 '
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 XMLDOMVisitorTest >> testVisit [
 	| visitor |
 	visitor := XMLDOMTestVisitor new.

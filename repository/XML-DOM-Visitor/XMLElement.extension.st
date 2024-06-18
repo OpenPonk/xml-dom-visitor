@@ -1,6 +1,6 @@
-Extension { #name : #XMLElement }
+Extension { #name : 'XMLElement' }
 
-{ #category : #'*XML-DOM-Visitor' }
+{ #category : '*XML-DOM-Visitor' }
 XMLElement >> accept: aVisitor [
 	^ aVisitor visitElement: self
 ]

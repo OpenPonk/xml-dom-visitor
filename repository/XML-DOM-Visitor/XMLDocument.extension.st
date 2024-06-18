@@ -1,6 +1,6 @@
-Extension { #name : #XMLDocument }
+Extension { #name : 'XMLDocument' }
 
-{ #category : #'*XML-DOM-Visitor-visitor' }
+{ #category : '*XML-DOM-Visitor-visitor' }
 XMLDocument >> accept: aVisitor [
 	^ aVisitor visitDocument: self
 ]

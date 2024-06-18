@@ -1,6 +1,6 @@
-Extension { #name : #XMLString }
+Extension { #name : 'XMLString' }
 
-{ #category : #'*XML-DOM-Visitor-visitor' }
+{ #category : '*XML-DOM-Visitor-visitor' }
 XMLString >> accept: aVisitor [
 	aVisitor visitString: self
 ]

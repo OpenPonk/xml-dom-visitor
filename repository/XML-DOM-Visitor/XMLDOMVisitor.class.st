@@ -2,32 +2,34 @@
 I am a base class for XML DOM visitors.
 "
 Class {
-	#name : #XMLDOMVisitor,
-	#superclass : #Object,
-	#category : 'XML-DOM-Visitor-Visitor'
+	#name : 'XMLDOMVisitor',
+	#superclass : 'Object',
+	#category : 'XML-DOM-Visitor-Visitor',
+	#package : 'XML-DOM-Visitor',
+	#tag : 'Visitor'
 }
 
-{ #category : #visitor }
+{ #category : 'visitor' }
 XMLDOMVisitor >> visit: aDocument [
 	^ aDocument accept: self
 ]
 
-{ #category : #visiting }
+{ #category : 'visiting' }
 XMLDOMVisitor >> visitCData: aCDataNode [ 
 
 ]
 
-{ #category : #visiting }
+{ #category : 'visiting' }
 XMLDOMVisitor >> visitDocument: aDocument [
 	aDocument nodes do: [ :each | each accept: self ]
 ]
 
-{ #category : #visiting }
+{ #category : 'visiting' }
 XMLDOMVisitor >> visitElement: anElement [
 	^ anElement nodes do: [ :each | each accept: self ]
 ]
 
-{ #category : #visiting }
+{ #category : 'visiting' }
 XMLDOMVisitor >> visitString: aStringNode [ 
 
 ]

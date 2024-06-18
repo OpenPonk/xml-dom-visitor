@@ -1,10 +1,11 @@
 Class {
-	#name : #ConfigurationOfXmlDomVisitor,
-	#superclass : #ConfigurationOf,
-	#category : 'ConfigurationOfXmlDomVisitor'
+	#name : 'ConfigurationOfXmlDomVisitor',
+	#superclass : 'ConfigurationOf',
+	#category : 'ConfigurationOfXmlDomVisitor',
+	#package : 'ConfigurationOfXmlDomVisitor'
 }
 
-{ #category : #baselines }
+{ #category : 'baselines' }
 ConfigurationOfXmlDomVisitor >> baseline_0_1_0: spec [
 	<version: '0.1.0-baseline'>
 	spec
@@ -22,7 +23,7 @@ ConfigurationOfXmlDomVisitor >> baseline_0_1_0: spec [
 			spec group: 'default' with: #('XML-DOM-Visitor') ]
 ]
 
-{ #category : #'symbolic versions' }
+{ #category : 'symbolic versions' }
 ConfigurationOfXmlDomVisitor >> development: spec [
 	<symbolicVersion: #development>
 	spec for: #common version: '0.1.0-baseline'
