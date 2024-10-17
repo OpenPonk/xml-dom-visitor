@@ -15,7 +15,7 @@ BaselineOfXMLDOMVisitor >> baseline: spec [
 	spec for: #common do: [
 		spec baseline: 'XMLParser' with: [
 			spec
-				repository: 'github://pharo-contributions/XML-XMLParser:v3.6.1';
+				repository: 'github://pharo-contributions/XML-XMLParser:v3.6.x';
 				loads: #( Core ) ].
 		spec
 			package: 'XML-DOM-Visitor'
