@@ -4,8 +4,8 @@ Class {
 	#instVars : [
 		'entries'
 	],
-	#category : 'XML-DOM-Visitor-Visitor',
-	#package : 'XML-DOM-Visitor',
+	#category : 'OpenPonk-XMLDOMVisitor-Visitor',
+	#package : 'OpenPonk-XMLDOMVisitor',
 	#tag : 'Visitor'
 }
 

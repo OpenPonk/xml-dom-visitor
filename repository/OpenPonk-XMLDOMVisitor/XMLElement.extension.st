@@ -1,6 +1,6 @@
 Extension { #name : 'XMLElement' }
 
-{ #category : '*XML-DOM-Visitor' }
+{ #category : '*OpenPonk-XMLDOMVisitor' }
 XMLElement >> accept: aVisitor [
 	^ aVisitor visitElement: self
 ]
