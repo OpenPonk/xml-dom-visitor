@@ -1,8 +1,8 @@
 Class {
 	#name : 'XMLDOMTypedElement',
 	#superclass : 'XMLElement',
-	#category : 'XML-DOM-Visitor-DOM',
-	#package : 'XML-DOM-Visitor',
+	#category : 'OpenPonk-XMLDOMVisitor-DOM',
+	#package : 'OpenPonk-XMLDOMVisitor',
 	#tag : 'DOM'
 }
 

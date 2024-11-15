@@ -1,6 +1,6 @@
 Extension { #name : 'XMLCData' }
 
-{ #category : '*XML-DOM-Visitor-visitor' }
+{ #category : '*OpenPonk-XMLDOMVisitor-visitor' }
 XMLCData >> accept: aVisitor [
 	aVisitor visitCData: self
 ]

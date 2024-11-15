@@ -1,6 +1,6 @@
 Extension { #name : 'XMLString' }
 
-{ #category : '*XML-DOM-Visitor-visitor' }
+{ #category : '*OpenPonk-XMLDOMVisitor-visitor' }
 XMLString >> accept: aVisitor [
 	aVisitor visitString: self
 ]

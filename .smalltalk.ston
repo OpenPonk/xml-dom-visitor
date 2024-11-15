@@ -4,18 +4,18 @@ SmalltalkCISpec {
 			#platforms : [
 				#pharo
 			],
-			#baseline : 'XMLDOMVisitor',
+			#baseline : 'OpenPonkXMLDOMVisitor',
 			#directory : 'repository'
 		}
 	],
 	#testing : {
+		#packages : [
+			'OpenPonk*'
+		],
 		#coverage : {
 			#packages : [
-				'XML-DOM-Visitor'
+				'OpenPonk-XMLDOMVisitor'
 			]
-		},
-		#packages : [
-			'XML-DOM-Visitor'
-		]
+		}
 	}
 }

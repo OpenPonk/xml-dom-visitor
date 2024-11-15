@@ -1,8 +1,8 @@
 Class {
 	#name : 'XMLDOMVisitorTest',
 	#superclass : 'TestCase',
-	#category : 'XML-DOM-Visitor-Tests',
-	#package : 'XML-DOM-Visitor',
+	#category : 'OpenPonk-XMLDOMVisitor-Tests',
+	#package : 'OpenPonk-XMLDOMVisitor',
 	#tag : 'Tests'
 }
 
