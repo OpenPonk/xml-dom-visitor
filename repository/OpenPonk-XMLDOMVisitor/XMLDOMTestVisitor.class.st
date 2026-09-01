@@ -1,3 +1,6 @@
+"
+I am a mock XML DOM visitor used exclusively for unit testing. I record the traversal sequence of XML nodes into an entries collection to verify correct visitation behavior.
+"
 Class {
 	#name : 'XMLDOMTestVisitor',
 	#superclass : 'XMLDOMVisitor',

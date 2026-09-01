@@ -1,5 +1,5 @@
 "
-I am a base class for XML DOM visitors.
+I am the abstract base class for XML DOM visitors. I provide default traversal mechanisms for XML documents, elements, strings, and CDATA nodes.
 "
 Class {
 	#name : 'XMLDOMVisitor',
