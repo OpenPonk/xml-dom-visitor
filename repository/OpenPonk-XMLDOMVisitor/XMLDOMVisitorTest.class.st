@@ -1,3 +1,6 @@
+"
+I am a unit test class verifying the basic traversal and node processing mechanisms of XMLDOMVisitor across different XML DOM node types.
+"
 Class {
 	#name : 'XMLDOMVisitorTest',
 	#superclass : 'TestCase',
@@ -16,7 +19,7 @@ XMLDOMVisitorTest >> newDocument [
 '
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'tests' }
 XMLDOMVisitorTest >> testVisit [
 	| visitor |
 	visitor := XMLDOMTestVisitor new.

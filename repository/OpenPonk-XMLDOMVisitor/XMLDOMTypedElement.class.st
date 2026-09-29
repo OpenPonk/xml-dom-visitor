@@ -1,3 +1,6 @@
+"
+I am an extended XML element that provides typed data extraction methods. I convert raw XML string values and attributes into specific Pharo primitives such as numbers, booleans, dates, symbols, and UUIDs.
+"
 Class {
 	#name : 'XMLDOMTypedElement',
 	#superclass : 'XMLElement',

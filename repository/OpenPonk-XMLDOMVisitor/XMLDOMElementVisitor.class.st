@@ -1,7 +1,5 @@
 "
-I am a DOM visitor that visits elements and delegates the visition to pluggable `elementVisitor`.
-
-e.g. upon visiting `<ActorRoles>` element the `elementVisitor visitActorRoles:` method will be called.
+I am an XML DOM visitor that delegates element processing to a pluggable element visitor object. I dynamically resolve the visit selector based on the XML element's name (e.g., visiting an `<ActorRoles>` element triggers `#visitActorRoles:` on the delegate) and support ignoring predefined elements.
 "
 Class {
 	#name : 'XMLDOMElementVisitor',

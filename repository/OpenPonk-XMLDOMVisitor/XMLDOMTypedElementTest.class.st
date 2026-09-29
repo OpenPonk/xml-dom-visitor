@@ -1,3 +1,6 @@
+"
+I am a unit test class verifying the accurate parsing and type conversion of XML attributes and node values by XMLDOMTypedElement.
+"
 Class {
 	#name : 'XMLDOMTypedElementTest',
 	#superclass : 'TestCase',
