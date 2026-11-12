@@ -7,8 +7,8 @@ Class {
 	#instVars : [
 		'entries'
 	],
-	#category : 'OpenPonk-XMLDOMVisitor-Visitor',
-	#package : 'OpenPonk-XMLDOMVisitor',
+	#category : 'OpenPonk-XMLDOMVisitor-Tests-Visitor',
+	#package : 'OpenPonk-XMLDOMVisitor-Tests',
 	#tag : 'Visitor'
 }
 

@@ -4,9 +4,9 @@ I am a unit test class verifying the basic traversal and node processing mechani
 Class {
 	#name : 'XMLDOMVisitorTest',
 	#superclass : 'TestCase',
-	#category : 'OpenPonk-XMLDOMVisitor-Tests',
-	#package : 'OpenPonk-XMLDOMVisitor',
-	#tag : 'Tests'
+	#category : 'OpenPonk-XMLDOMVisitor-Tests-Visitor',
+	#package : 'OpenPonk-XMLDOMVisitor-Tests',
+	#tag : 'Visitor'
 }
 
 { #category : 'instance creation' }

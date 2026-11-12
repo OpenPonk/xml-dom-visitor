@@ -4,9 +4,9 @@ I am a unit test class verifying the dynamic selector resolution, element ignori
 Class {
 	#name : 'XMLDOMElementVisitorTest',
 	#superclass : 'TestCase',
-	#category : 'OpenPonk-XMLDOMVisitor-Tests',
-	#package : 'OpenPonk-XMLDOMVisitor',
-	#tag : 'Tests'
+	#category : 'OpenPonk-XMLDOMVisitor-Tests-Visitor',
+	#package : 'OpenPonk-XMLDOMVisitor-Tests',
+	#tag : 'Visitor'
 }
 
 { #category : 'tests' }

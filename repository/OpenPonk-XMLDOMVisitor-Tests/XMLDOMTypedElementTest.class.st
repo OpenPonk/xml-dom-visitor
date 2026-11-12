@@ -7,9 +7,9 @@ Class {
 	#instVars : [
 		'element'
 	],
-	#category : 'OpenPonk-XMLDOMVisitor-Tests',
-	#package : 'OpenPonk-XMLDOMVisitor',
-	#tag : 'Tests'
+	#category : 'OpenPonk-XMLDOMVisitor-Tests-DOM',
+	#package : 'OpenPonk-XMLDOMVisitor-Tests',
+	#tag : 'DOM'
 }
 
 { #category : 'instance creation' }

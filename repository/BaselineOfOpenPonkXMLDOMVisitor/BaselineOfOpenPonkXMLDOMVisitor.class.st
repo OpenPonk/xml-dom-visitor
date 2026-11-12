@@ -20,5 +20,8 @@ BaselineOfOpenPonkXMLDOMVisitor >> baseline: spec [
 		spec
 			package: 'OpenPonk-XMLDOMVisitor'
 			with: [ spec requires: #( 'XMLParser' ) ].
-		spec group: 'default' with: #( 'OpenPonk-XMLDOMVisitor' ) ]
+		spec
+			package: 'OpenPonk-XMLDOMVisitor-Tests'
+			with: [ spec requires: #( 'OpenPonk-XMLDOMVisitor' ) ].
+		spec group: 'default' with: #( 'OpenPonk-XMLDOMVisitor' 'OpenPonk-XMLDOMVisitor-Tests' ) ]
 ]
