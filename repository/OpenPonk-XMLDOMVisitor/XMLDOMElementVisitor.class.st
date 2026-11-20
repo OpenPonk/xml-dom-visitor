@@ -48,5 +48,9 @@ XMLDOMElementVisitor >> visitElement: anElement [
 
 { #category : 'visitor' }
 XMLDOMElementVisitor >> visitSelectorFor: aNodeName [
-	^ ('visit' , aNodeName capitalized , ':') asSymbol
+
+	^ (String streamContents: [ :stream |
+			   stream << 'visit'.
+			   stream << aNodeName capitalized.
+			   stream nextPut: $: ]) asSymbol
 ]

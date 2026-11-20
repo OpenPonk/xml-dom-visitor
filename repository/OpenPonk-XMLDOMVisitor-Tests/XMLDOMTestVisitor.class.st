@@ -24,6 +24,15 @@ XMLDOMTestVisitor >> initialize [
 ]
 
 { #category : 'visiting' }
+XMLDOMTestVisitor >> visitCData: aCDataNode [
+
+	| entry |
+	entry := #cdata -> aCDataNode string.
+	entries add: entry.
+	^ entry
+]
+
+{ #category : 'visiting' }
 XMLDOMTestVisitor >> visitDocument: aDocument [
 	entries add: 'version' -> aDocument version.
 	entries add: 'encoding' -> aDocument encoding.
@@ -38,5 +47,9 @@ XMLDOMTestVisitor >> visitElement: anElement [
 
 { #category : 'visiting' }
 XMLDOMTestVisitor >> visitString: aStringNode [
-	entries add: #string -> aStringNode string
+
+	| entry |
+	entry := #string -> aStringNode string.
+	entries add: entry.
+	^ entry
 ]

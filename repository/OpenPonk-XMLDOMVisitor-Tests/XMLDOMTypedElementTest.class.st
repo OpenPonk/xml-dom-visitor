@@ -4,9 +4,6 @@ I am a unit test class verifying the accurate parsing and type conversion of XML
 Class {
 	#name : 'XMLDOMTypedElementTest',
 	#superclass : 'TestCase',
-	#instVars : [
-		'element'
-	],
 	#category : 'OpenPonk-XMLDOMVisitor-Tests-DOM',
 	#package : 'OpenPonk-XMLDOMVisitor-Tests',
 	#tag : 'DOM'
@@ -25,19 +22,10 @@ XMLDOMTypedElementTest >> elementWithAttributes: aDictionary [
 	^ XMLDOMTypedElement name: 'element' attributes: aDictionary
 ]
 
-{ #category : 'running' }
-XMLDOMTypedElementTest >> setUp [
-	super setUp.
-	element := XMLElement
-		name: 'element'
-		attributes:
-			{#uuid -> 'c95c1cd5-832d-4b46-b73f-a080ba157501'.
-			#isSomething -> true} asDictionary
-]
-
 { #category : 'tests-typed attribute accessing' }
 XMLDOMTypedElementTest >> testBooleanAt [
 
+	| element |
 	element := self elementWithAttributes: {
 			           (#true -> 'true').
 			           (#false -> 'false').
@@ -66,17 +54,16 @@ XMLDOMTypedElementTest >> testBooleanValue [
 
 { #category : 'tests-typed attribute accessing' }
 XMLDOMTypedElementTest >> testDateAt [
-	element := self elementWithAttributes: {#date -> '2016-10-22T17:16:59'} asDictionary.
-	self
-		assert: (element dateAt: #date)
-		equals:
-			(DateAndTime
-				year: 2016
-				month: 10
-				day: 22
-				hour: 17
-				minute: 16
-				second: 59)
+
+	| element |
+	element := self elementWithAttributes: { (#date -> '2016-10-22T17:16:59') } asDictionary.
+	self assert: (element dateAt: #date) equals: (DateAndTime
+			 year: 2016
+			 month: 10
+			 day: 22
+			 hour: 17
+			 minute: 16
+			 second: 59)
 ]
 
 { #category : 'tests-typed value accessing' }
@@ -102,10 +89,11 @@ XMLDOMTypedElementTest >> testIsEmptyValue [
 
 { #category : 'tests-typed attribute accessing' }
 XMLDOMTypedElementTest >> testNumberAt [
-	element := self
-		elementWithAttributes:
-			{#num -> '12'.
-			#float -> '10.4'} asDictionary.
+
+	| element |
+	element := self elementWithAttributes: {
+			           (#num -> '12').
+			           (#float -> '10.4') } asDictionary.
 	self assert: (element numberAt: #num) equals: 12.
 	self assert: (element numberAt: #float) equals: 10.4
 ]
@@ -119,6 +107,7 @@ XMLDOMTypedElementTest >> testNumberValue [
 { #category : 'tests-typed attribute accessing' }
 XMLDOMTypedElementTest >> testStringAt [
 
+	| element |
 	element := self elementWithAttributes: { (#str -> 'value') } asDictionary.
 	self assert: (element stringAt: #str) equals: 'value'.
 	self deny: (element stringAt: #str) isSymbol description: 'stringAt: must return a String rather than a Symbol'
@@ -132,6 +121,7 @@ XMLDOMTypedElementTest >> testStringValue [
 { #category : 'tests-typed attribute accessing' }
 XMLDOMTypedElementTest >> testSymbolAt [
 
+	| element |
 	element := self elementWithAttributes: { (#str -> 'value') } asDictionary.
 	self assert: (element symbolAt: #str) identicalTo: #value.
 	self assert: (element symbolAt: #str) isSymbol description: 'symbolAt: must return a Symbol'
@@ -146,11 +136,10 @@ XMLDOMTypedElementTest >> testSymbolValue [
 
 { #category : 'tests-typed attribute accessing' }
 XMLDOMTypedElementTest >> testUuidAt [
-	element := self
-		elementWithAttributes: {#uuid -> 'c95c1cd5-832d-4b46-b73f-a080ba157501'} asDictionary.
-	self
-		assert: (element uuidAt: #uuid)
-		equals: (UUID fromString: 'c95c1cd5-832d-4b46-b73f-a080ba157501')
+
+	| element |
+	element := self elementWithAttributes: { (#uuid -> 'c95c1cd5-832d-4b46-b73f-a080ba157501') } asDictionary.
+	self assert: (element uuidAt: #uuid) equals: (UUID fromString: 'c95c1cd5-832d-4b46-b73f-a080ba157501')
 ]
 
 { #category : 'tests-typed value accessing' }
