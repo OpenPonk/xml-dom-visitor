@@ -1,19 +1,23 @@
 # XML DOM Visitor
-[![Build Status](https://travis-ci.com/OpenPonk/xml-dom-visitor.svg?branch=master)](https://travis-ci.com/OpenPonk/xml-dom-visitor) [![Coverage Status](https://coveralls.io/repos/github/OpenPonk/xml-dom-visitor/badge.svg?branch=master)](https://coveralls.io/github/OpenPonk/xml-dom-visitor?branch=master)
 
-An extension for [XMLParser's](https://github.com/pharo-contributions/XML-XMLParser) DOM.
+[![Nightly](https://github.com/OpenPonk/xml-dom-visitor/actions/workflows/nightly.yml/badge.svg)](https://github.com/OpenPonk/xml-dom-visitor/actions/workflows/nightly.yml) [![Coverage Status](https://coveralls.io/repos/github/OpenPonk/xml-dom-visitor/badge.svg?branch=master)](https://coveralls.io/github/OpenPonk/xml-dom-visitor?branch=master)
 
-Three functionalities:
+An extension for [XMLParser](https://github.com/pharo-contributions/XML-XMLParser)'s DOM providing:
 
-* [base class for DOM visitors by the element's types (Document, Element, CData, String, ...)](#usage---creating-generic-dom-visitor)
-* [delegating visitor with which you can visit the DOM by element's name](#usage---element-delegating-visitor)
-* [typed retrieval of node values and attribute values](#usage---typed-values)
-	* [supported selectors](#supported-selectors)
+- [Base class for DOM visitors by node type (`Document`, `Element`, `CData`, `String`, ...)](#usage---creating-a-generic-dom-visitor)
+- [Delegating visitor dispatching by element name](#usage---element-delegating-visitor)
+- [Typed retrieval of node and attribute values](#usage---typed-values)
 
-<br>
+## Installation
 
-* [Example](#example)
-* [Installation](#installation)
+See [openponk.org/#direct-installation](https://openponk.org/#direct-installation) for the supported Pharo version.
+
+```smalltalk
+Metacello new
+	baseline: 'OpenPonkXMLDOMVisitor';
+	repository: 'github://OpenPonk/xml-dom-visitor';
+	load.
+```
 
 ## Example
 
@@ -25,54 +29,50 @@ Three functionalities:
 </people>
 ```
 
-The XML above can be visited with a visitor such as the following one:
+The XML above can be visited with a visitor such as:
 
-```
+```smalltalk
 MyVisitor>>visitPeople: aPeopleElement
 	"nothing to do"
 
 MyVisitor>>visitDocId: aDocIdElement
-	aDocIdElement uuidValue "an instace of UUID('cc254e89-569e-5b46-a6e9-4a06de4d9da0')"
+	aDocIdElement uuidValue "an instance of UUID('cc254e89-569e-5b46-a6e9-4a06de4d9da0')"
 
 MyVisitor>>visitPerson: aPersonElement
-	aPersonElement stringAt: #name "returns string 'Sarah'"
-	aPersonElement numberAt: #age "returns number '32'"
+	aPersonElement stringAt: #name. "returns string 'Sarah'"
+	aPersonElement numberAt: #age "returns number 32"
 ```
 
-## Usage - Creating generic DOM visitor
+## Usage - Creating a Generic DOM Visitor
 
-Subclass `XMLDOMVisitor` to create your own visitor.
+Subclass `XMLDOMVisitor` to create your own visitor. Look at `XMLDOMTestVisitor` in the test package for an example.
 
-**Example**: Look at in-image class `XMLDOMTestVisitor`.
+## Usage - Element Delegating Visitor
 
-## Usage - Element delegating visitor
+Use `XMLDOMElementVisitor` to delegate visiting by the element's `localName` (without namespace) as the selector:
 
-Use `XMLDOMElementVisitor` to delegate the visiting by the element's `localName` (without namespace) as the selector, e.g.
-
-```
+```smalltalk
 visitor := MyVisitor new.
 XMLDOMElementVisitor new
 	elementVisitor: visitor;
 	visit: dom.
 ```
 
-Then e.g. for an element `<person>`, the `visitPerson:` message will be sent to your `MyVisitor`.
+For an element `<person>`, the `visitPerson:` message is sent to `MyVisitor`.
 
-## Usage - Typed values
+## Usage - Typed Values
 
-If you specify `XMLDOMTypedElement` as the parsing node, then you can retrieve values with a specific type.
+Specify `XMLDOMTypedElement` as the parsing node class to retrieve typed values:
 
-```
+```smalltalk
 dom := (XMLDOMParser on: aStream)
 	nodeFactory: (XMLPluggableElementFactory new elementClass: XMLDOMTypedElement);
 	parseDocument.
 ```
 
-Example:
+For `<myElement isRandom="true">12.7</myElement>`:
 
-`<myElement isRandom="true">12.7</myElement>` will be parsed into `XMLDOMTypedElement` instance.
-
-```
+```smalltalk
 element booleanAt: #isRandom. "-> true"
 element stringAt: #isRandom. "-> 'true'"
 
@@ -80,22 +80,13 @@ element numberValue. "-> 12.7"
 element stringValue. "-> '12.7'"
 ```
 
-### Supported selectors
+### Supported Selectors
 
-Look into the protocols `typed attribute accessing` and `typed value accessing` of `XMLDOMTypedElement`.
+Inspect the `typed attribute accessing` and `typed value accessing` protocols of `XMLDOMTypedElement`. Supported conversions: `boolean`, `date`, `number`, `string`, `symbol`, and `uuid`.
 
-The following conversions are supported: `boolean`, `date`, `number`, `string`, `symbol`, and `uuid`.
+- `booleanAt:` / `booleanValue` return `true` for `'true'`, `'1'`, or `'yes'`.
+- `XMLDOMTypedElement>>isEmptyValue` returns whether the element has content (`<el></el>` vs. `<el>data</el>`).
 
-Extras:
+## Documentation
 
-* `booleanAt:`/`booleanValue` will return `true` for strings `'true'`, `'1'`, or 'yes'.
-* `XMLDOMTypedElement>>isEmptyValue` will return boolean if the element has any content. (e.g. `<el></el>` versus `<el>data</el>`)
-
-## Installation
-
-```
-Metacello new
-	baseline: 'XMLDOMVisitor';
-	repository: 'github://OpenPonk/xml-dom-visitor/repository';
-	load.
-```
+Part of the [OpenPonk](https://openponk.org) platform. For architecture, the repository catalog, and contributing guidelines, see [`OpenPonk/.github`](https://github.com/OpenPonk/.github/blob/main/profile/README.md).
